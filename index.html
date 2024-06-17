@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" /> 
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inknut Antiqua">
+  </head>
+  
+  <body>
+  <div id="app">
+         
+<svg viewBox="0 0 1574 768" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="echoesContainer" >
+<rect id="backgroundImageContainer" @mouseover="mouseNotOverBooks()" width="1572.79" height="768" transform="translate(0.371277)" fill="url(#pattern0_2_5)"/>
+  
+<!-- Resources window   -->
+<g id="resourcesWindow"  v-show="showResourcesWindow" filter="url(#filter2_b_2_5)">
+<rect x="1" width="1572.79" height="768" rx="13.6245" fill="url(#paint2_linear_2_5)" fill-opacity="0.51"/>
+<rect x="2.36245" y="1.36245" width="1570.07" height="765.275" rx="0" stroke="#BF986E" stroke-width="2.72489"/>
+     
+<rect id="resourcesContainer" x="242.291" y="66.3772" width="1087.27" height="634.149" rx="10.4229" fill="#D9D9D9" stroke="#E8B27B" stroke-width="1.09714"/>
+  <foreignObject  x="242.291" y="66.3772" width="1087.27" height="634.149" >
+   
+<!-- book 1     -->
+    
+    <iframe v-if = "resource1 == true" src="https://en.wikipedia.org/wiki/Library_and_Archives_Canada"  width="1087.27" height="634.149" type="application/pdf">
+  <p>Your browser does not support iframes, or the PDF cannot be displayed.</p>
+    </iframe>
+
+    <!--  book 2      -->  
+      <iframe v-if = "resource2 == true" src="https://en.wikipedia.org/wiki/Declaration_on_the_Rights_of_Indigenous_Peoples"   width="1087.27" height="634.149" type="application/pdf">
+  <p>Your browser does not support iframes, or the PDF cannot be displayed.</p>
+    </iframe>
+
+       <!--  book 3      -->  
+      <iframe v-if = "resource3 == true" src="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/UNDRIP_E_web.pdf?v=1716581521155"  width="1087.27" height="634.149" type="application/pdf">
+  <p>Your browser does not support iframes, or the PDF cannot be displayed.</p>
+    </iframe>
+
+           <!--  book 4      --> 
+      <iframe v-if = "resource4 == true" src="https://en.wikipedia.org/wiki/Canadian_Indian_residential_school_system"  width="1087.27" height="634.149" type="application/pdf">
+  <p>Your browser does not support iframes, or the PDF cannot be displayed.</p>
+    </iframe>
+
+           <!--  book 5      -->  
+      <iframe v-if = "resource5 == true" src="https://www.sac-isc.gc.ca/eng/1581971225188/1581971250953"  width="1087.27" height="634.149" type="application/pdf">
+  <p>Your browser does not support iframes, or the PDF cannot be displayed.</p>
+    </iframe>
+
+        
+           <!--  book 6      -->  
+      <div v-if = "resource6 == true"  width="1087.27" height="634.149" type="application/pdf">
+        <p id="about">This interactive multimedia artwork was made by Luis Navarro Del Angel for the project Echoes From This Land by Professor <a href="https://experts.mcmaster.ca/display/palmebr" target="_blank"> Briana Palmer at McMaster University</a>.
+          <br> <br> <a href="https://www.luisnavarrodelangel.net/" target="_blank">Luis Navarro Del Angel</a> is a Mexican new media artist living in the traditional territories of the Mississauga and Haudenosaunee nations, and within the lands protected by the “Dish with One Spoon” wampum agreement. Luis recently completed his Ph.D. in the Communication, New Media, and Cultural Studies program at McMaster University. His artistic practice revolves around digital rhetoric, audiovisual performance, and electronic Latin dance music. 
+    
+<br> <br> To contact Luis send an email to <a href="mailto:navarrol@mcmaster.ca" target="_blank">navarrol@mcmaster.ca</a> </p>
+    </div>  
+
+  </foreignObject>
+
+<!-- Close button    -->
+ <g id="closeButton" @click="closeResourceWindow()" filter="url(#filter1_b_2_5)">
+<rect x="212" y="37" width="95.994" height="81.994" rx="11.497" fill="url(#paint1_linear_2_5)"/>
+<rect x="213.15" y="38.1497" width="93.6946" height="79.6946" rx="10.3473" stroke="#CCAB8D" stroke-width="2.2994"/>
+<text id="Close" fill="white" xml:space="preserve" style="white-space: pre" font-family="Inknut Antiqua" font-size="22.994" font-weight="bold" letter-spacing="0em"><tspan x="223.497" y="87.5051">Close</tspan></text>
+</g>
+</g>
+  
+<!-- Start window  -->
+  <g id="startWindow"  v-show="showStartWindow" filter="url(#filter2_b_2_5)">
+<rect x="1" width="1572.79" height="768" rx="13.6245" fill="url(#paint2_linear_2_5)" fill-opacity="0.51"/>
+<rect x="2.36245" y="1.36245" width="1570.07" height="765.275" rx="12.262" stroke="#BF986E" stroke-width="2.72489"/>
+<text id="title" fill="white" xml:space="preserve" style="white-space: pre" font-family="Inknut Antiqua" font-size="27.2489" font-weight="bold" letter-spacing="0em"><tspan x="286.269" y="70.2166">Truth and Reconciliation Commission of Canada: Calls to Action&#10;</tspan><tspan x="543.55" y="140.217">Museums and Archives, Call 69</tspan></text>
+
+<!-- Text from Call     -->
+<text id="textFromCall" fill="#FFF2F2" xml:space="preserve" style="white-space: pre" font-family="Inknut Antiqua" font-size="19" font-weight="bold" letter-spacing="0em"><tspan x="35" y="198.934">We </tspan><tspan x="75.0967" y="198.934">call </tspan><tspan x="119.888" y="198.934">upon </tspan><tspan x="180.636" y="198.934">Library </tspan><tspan x="269.049" y="198.934">and </tspan><tspan x="314.897" y="198.934">Archives </tspan><tspan x="416.781" y="198.934">Canada </tspan><tspan x="503.803" y="198.934">to:&#10;</tspan><tspan x="35" y="247.934">&#10;</tspan><tspan x="35" y="296.934">i. </tspan><tspan x="55.9736" y="296.934">Fully </tspan><tspan x="117.842" y="296.934">adopt </tspan><tspan x="188.226" y="296.934">and </tspan><tspan x="235.715" y="296.934">implement </tspan><tspan x="360.594" y="296.934">the </tspan><tspan x="403.11" y="296.934">United </tspan><tspan x="484.516" y="296.934">Nations </tspan><tspan x="576.294" y="296.934">Declaration </tspan><tspan x="713.031" y="296.934">on </tspan><tspan x="747.345" y="296.934">the </tspan><tspan x="789.86" y="296.934">Rights </tspan><tspan x="866.535" y="296.934">of </tspan><tspan x="895.58" y="296.934">Indigenous </tspan><tspan x="35" y="345.934">Peoples </tspan><tspan x="128.88" y="345.934">and  </tspan><tspan x="187.071" y="345.934">the </tspan><tspan x="231.465" y="345.934">United </tspan><tspan x="314.75" y="345.934">Nations </tspan><tspan x="408.407" y="345.934">Joinet-Orentlicher </tspan><tspan x="620.369" y="345.934">Principles, </tspan><tspan x="748.333" y="345.934">as </tspan><tspan x="780.407" y="345.934">related </tspan><tspan x="867.755" y="345.934">to </tspan><tspan x="898.864" y="345.934">Aboriginal </tspan><tspan x="35" y="394.934">peoples&#x2019; </tspan><tspan x="133.077" y="394.934">inalienable </tspan><tspan x="261.714" y="394.934">right </tspan><tspan x="321.512" y="394.934">to </tspan><tspan x="349.75" y="394.934">know </tspan><tspan x="415.041" y="394.934">the </tspan><tspan x="456.563" y="394.934">truth </tspan><tspan x="519.46" y="394.934">about </tspan><tspan x="588.017" y="394.934">what </tspan><tspan x="646.999" y="394.934">happened </tspan><tspan x="761.238" y="394.934">and </tspan><tspan x="807.733" y="394.934">why, </tspan><tspan x="861.687" y="394.934">with </tspan><tspan x="915.789" y="394.934">regard </tspan><tspan x="993.716" y="394.934">to </tspan><tspan x="35" y="443.934">human </tspan><tspan x="114.451" y="443.934">rights </tspan><tspan x="184.217" y="443.934">violations </tspan><tspan x="297.011" y="443.934">committed </tspan><tspan x="420.251" y="443.934">against </tspan><tspan x="504.452" y="443.934">them </tspan><tspan x="565.312" y="443.934">in </tspan><tspan x="592.513" y="443.934">the </tspan><tspan x="633.389" y="443.934">residential </tspan><tspan x="757.909" y="443.934">schools. </tspan><tspan x="844.875" y="443.934">&#10;</tspan><tspan x="35" y="492.934">&#10;</tspan><tspan x="35" y="541.934">ii. </tspan><tspan x="67.3447" y="541.934">Ensure </tspan><tspan x="155.02" y="541.934">that </tspan><tspan x="210.706" y="541.934">its </tspan><tspan x="249.007" y="541.934">record </tspan><tspan x="332.507" y="541.934">holdings </tspan><tspan x="435.73" y="541.934">related </tspan><tspan x="524.815" y="541.934">to </tspan><tspan x="557.661" y="541.934">residential </tspan><tspan x="687.437" y="541.934">schools </tspan><tspan x="778.692" y="541.934">are </tspan><tspan x="825.027" y="541.934">accessible </tspan><tspan x="947.585" y="541.934">to </tspan><tspan x="980.431" y="541.934">the </tspan><tspan x="35" y="590.934">public.&#10;</tspan><tspan x="35" y="639.934">&#10;</tspan><tspan x="35" y="688.934">iii. </tspan><tspan x="78.6756" y="688.934">Commit </tspan><tspan x="179.036" y="688.934">more </tspan><tspan x="249.412" y="688.934">resources </tspan><tspan x="369.885" y="688.934">to </tspan><tspan x="406.306" y="688.934">its </tspan><tspan x="448.182" y="688.934">public </tspan><tspan x="531.249" y="688.934">education </tspan><tspan x="654.71" y="688.934">materials </tspan><tspan x="772.27" y="688.934">and </tspan><tspan x="826.948" y="688.934">programming </tspan><tspan x="988.632" y="688.934">on </tspan><tspan x="35" y="737.934">residential </tspan><tspan x="159.521" y="737.934">schools.</tspan></text>
+
+<!-- Instructions Text     -->
+    <text id="instructions" fill="white"  xml:space="preserve" style="white-space: pre" font-family="Inknut Antiqua" font-size="27.2489" font-weight="bold" letter-spacing="0em"><tspan x="1136" y="325.267">Explore </tspan><tspan x="1293.45" y="325.267">resources </tspan><tspan x="1479.75" y="325.267">on </tspan><tspan x="1136" y="395.267">these </tspan><tspan x="1233.46" y="395.267">topics </tspan><tspan x="1342.88" y="395.267">by </tspan><tspan x="1393.75" y="395.267">clicking </tspan><tspan x="1136" y="465.267">the </tspan><tspan x="1194.62" y="465.267">books </tspan><tspan x="1295.13" y="465.267">in </tspan><tspan x="1334.14" y="465.267">the </tspan><tspan x="1392.76" y="465.267">shelf&#10;</tspan><tspan x="1136" y="535.267">&#10;</tspan></text>
+
+<!-- Start button     -->
+    <g id="startTextContainer">
+<g id="startButton" @click="start()" filter="url(#filter3_b_2_5)">
+<rect x="1163" y="560" width="329.578" height="97.1736" rx="13.6245" fill="url(#paint3_linear_2_5)"/>
+<rect x="1164.36" y="561.362" width="326.853" height="94.4487" rx="12.262" stroke="#CCAB8D" stroke-width="2.72489"/>
+<text id="CLICK TO START" fill="white"  xml:space="preserve" style="white-space: pre" font-family="Inknut Antiqua" font-size="27.2489" font-weight="bold" letter-spacing="0em"><tspan x="1187.79" y="619.854">CLICK </tspan><tspan x="1300.03" y="619.854">TO </tspan><tspan x="1356.82" y="619.854">START</tspan></text>
+</g>
+</g>
+</g>
+  
+
+  
+<!-- Books   -->
+<g id="books">
+  <image id="book6" @click="clickBook6()" v-show="showBook6" href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book6.svg?v=1716574934680" x="1071.18" y="524.434" width="318.171" height="62.5371"  />
+  <image id="book5" @click="clickBook5()" v-show="showBook5" href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book5.svg?v=1716574932634" x="979.023" y="420.206" width="55.9543" height="262.217"  />
+  <image id="book4" @click="clickBook4()" v-show="showBook4" href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book4.svg?v=1716574930731"  x="444.714" y="398.263" width="84.48" height="284.16" />
+  <image id="book3" @click="clickBook3()"  v-show="showBook3" href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book3.svg?v=1718653225487" x="1334.5" y="9.87427" width="70.2171" height="369.737"  />
+  <image id="book2" @click="clickBook2()" v-show="showBook2"  href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book2.svg?v=1716574927456" x="698.154" width="97.6457" height="389.486" />
+  <image id="book1" @click="clickBook1()" v-show="showBook1" href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book1.svg?v=1716574203061" x="233.69" y="4.39" height="375.22" width="82.29" />
+  </g>
+  
+<!-- Book hovers   -->
+<g id="hoverRects" fill="transparent">
+<g id="hoverRectBook1"  @mouseover="mouseOverBook1()" v-show="showHoverBook1" filter="url(#filter4_i_2_5)">
+<rect x="218.154" y="36.7544" width="85.5771" height="275.383" stroke="url(#paint4_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/> </rect>
+</g>
+<g id="hoverRectBook2"   @mouseover="mouseOverBook2()" v-show="showHoverBook2" filter="url(#filter5_i_2_5)">
+  <rect x="705.286" y="36.7544" width="85.5771" height="275.383" stroke="url(#paint5_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+<g id="hoverRectBook3"  @mouseover="mouseOverBook3()" v-show="showHoverBook3" filter="url(#filter6_i_2_5)">
+  <rect x="1326.27" y="36.7544" width="85.5771" height="275.383" stroke="url(#paint6_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+<g id="hoverRectBook4"  @mouseover="mouseOverBook4()" v-show="showHoverBook4" filter="url(#filter7_i_2_5)">
+  <rect x="444.166" y="398.811" width="85.5771" height="275.383" stroke="url(#paint7_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+<g id="hoverRectBook5" @mouseover="mouseOverBook5()" v-show="showHoverBook5" filter="url(#filter8_i_2_5)">
+  <rect x="966.406" y="438.309" width="71.3143" height="232.594" stroke="url(#paint8_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+<g id="hoverRectBook6" @mouseover="mouseOverBook6()" v-show="showHoverBook6" filter="url(#filter9_i_2_5)">
+  <rect x="1094.77" y="521.691" width="187.611" height="66.9257" stroke="url(#paint9_linear_2_5)" stroke-width="7.68" stroke-dasharray="15.36 15.36"><animate attributeName="stroke-opacity" values="0.8;1" dur="1s" repeatCount="indefinite"/></rect>
+</g>
+</g>
+</g>
+  
+  
+<!-- Defs   -->
+<defs>
+<pattern id="pattern0_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0_2_5" transform="matrix(0.000976562 0 0 0.00199991 0 -0.523952)"/>
+</pattern>
+<filter id="filter0_b_2_5" x="177.425" y="2.29939" width="1217.53" height="762.251" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="17.2455"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2_5"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2_5" result="shape"/>
+</filter>
+<filter id="filter1_b_2_5" x="166.012" y="-8.98801" width="187.97" height="173.97" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="22.994"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2_5"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2_5" result="shape"/>
+</filter>
+<filter id="filter2_b_2_5" x="-39.8734" y="-40.8734" width="1654.54" height="849.747" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="20.4367"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2_5"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2_5" result="shape"/>
+</filter>
+<filter id="filter3_b_2_5" x="1108.5" y="505.502" width="438.573" height="206.169" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="27.2489"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_2_5"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_2_5" result="shape"/>
+</filter>
+<pattern id="pattern1_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.00757576 0 0 0.0384615 -6.82576 -20.9615)"/>
+</pattern>
+<pattern id="pattern2_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.030303 0 0 0.0064639 -24.2424 -3.07872)"/>
+</pattern>
+<pattern id="pattern3_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.02 0 0 0.00591716 -7.46 -2.73373)"/>
+</pattern>
+<pattern id="pattern4_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.0290179 0 0 0.00445104 -28.1339 -0.58457)"/>
+</pattern>
+<pattern id="pattern5_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.0187266 0 0 0.0046729 -10.8914 -0.658878)"/>
+</pattern>
+<pattern id="pattern6_2_5" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image1_2_5" transform="matrix(0.0213836 0 0 0.00469731 -4.07346 -0.676941)"/>
+</pattern>
+<filter id="filter4_i_2_5" x="214.314" y="32.9143" width="93.2571" height="287.451" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<filter id="filter5_i_2_5" x="701.446" y="32.9143" width="93.2571" height="287.451" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<filter id="filter6_i_2_5" x="1322.43" y="32.9143" width="93.2571" height="287.451" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<filter id="filter7_i_2_5" x="440.326" y="394.971" width="93.2571" height="287.452" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<filter id="filter8_i_2_5" x="962.566" y="434.469" width="78.9943" height="244.663" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<filter id="filter9_i_2_5" x="1090.93" y="517.851" width="195.291" height="78.9944" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4.38857"/>
+<feGaussianBlur stdDeviation="2.19429"/>
+<feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="shape" result="effect1_innerShadow_2_5"/>
+</filter>
+<linearGradient id="paint0_linear_2_5" x1="211.916" y1="63.8084" x2="1349.54" y2="730.06" gradientUnits="userSpaceOnUse">
+<stop offset="0.00650622" stop-opacity="0.6"/>
+<stop offset="1.0001" stop-color="#756161" stop-opacity="0.8"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2_5" x1="212" y1="47.8187" x2="308.39" y2="56.6366" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8B27B"/>
+<stop offset="1" stop-color="#AF3719"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2_5" x1="0.999983" y1="29.9304" x2="1373.73" y2="1023.69" gradientUnits="userSpaceOnUse">
+<stop offset="0.00650622" stop-opacity="0.8"/>
+<stop offset="1.0001" stop-color="#756161" stop-opacity="1"/>
+</linearGradient>
+<linearGradient id="paint3_linear_2_5" x1="1163" y1="572.822" x2="1474.81" y2="655.457" gradientUnits="userSpaceOnUse">
+<stop stop-color="#E8B27B"/>
+<stop offset="1" stop-color="#AF3719"/>
+</linearGradient>
+<linearGradient id="paint4_linear_2_5" x1="260.943" y1="40.5944" x2="260.943" y2="308.297" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<linearGradient id="paint5_linear_2_5" x1="748.074" y1="40.5944" x2="748.074" y2="308.297" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<linearGradient id="paint6_linear_2_5" x1="1369.06" y1="40.5944" x2="1369.06" y2="308.297" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<linearGradient id="paint7_linear_2_5" x1="486.954" y1="402.651" x2="486.954" y2="670.354" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<linearGradient id="paint8_linear_2_5" x1="1002.06" y1="442.149" x2="1002.06" y2="667.063" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<linearGradient id="paint9_linear_2_5" x1="1188.58" y1="525.531" x2="1188.58" y2="584.777" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F59B8C"/>
+<stop offset="1" stop-color="#FFFAFA"/>
+</linearGradient>
+<clipPath id="clip0_2_5">
+<rect width="1572.79" height="768" fill="white" transform="translate(0.371277)"/>
+</clipPath>
+<image id="image0_2_5" data-name="library2.jpg" width="1024" height="1024" xlink:href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/library2SVGCompressed.svg?v=1716218169788"/>
+<image id="image1_2_5" data-name="mainContainer.png" width="1280" height="832" xlink:href="https://cdn.glitch.global/1b0e9e64-ec07-44e9-984e-99a3f045693c/book1.svg?v=1716574203061"/>
+
+</defs>
+
+
+</svg>
+
+
+
+
+
+    
+    
+    </div>    
+    <script src="vue.js"></script>
+  </body>
+</html>
